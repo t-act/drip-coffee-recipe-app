@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
     }
 
     const factor = numAmount / recipe.amount;
-    const adjustedRecipe = JSON.parse(JSON.stringify(recipe)); //copy of recipe
+    const adjustedRecipe = JSON.parse(JSON.stringify(recipe));
 
     if (Array.isArray(adjustedRecipe.steps)) {
            adjustedRecipe.steps.forEach(step => {
@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
             }
        });
     }
-    adjustedRecipe.amount = numAmount; //userのamountに変更
+    adjustedRecipe.amount = numAmount;
     adjustedRecipe.beans_amount = Math.round(recipe.beans_amount * factor * 10) / 10;
 
     res.json(adjustedRecipe);
