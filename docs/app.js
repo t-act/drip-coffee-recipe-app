@@ -11,7 +11,7 @@ document.getElementById("recipe-form").addEventListener("submit", async (e) => {
 
   try {
     // バックエンドにリクエスト送信
-    const response = await fetch("http://localhost:3000/get-recipe", {
+    const response = await fetch("https://drip-coffee-recipe-app.onrender.com/get-recipe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userInput),
