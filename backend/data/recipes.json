@@ -5,6 +5,7 @@
         "roast": "dark",
         "amount_beans": 20,
         "amount": 300,
+        "beans_amount": 20,
         "taste": "bitter",
         "temperature": "hot",
         "steps": [
