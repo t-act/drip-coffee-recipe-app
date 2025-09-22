@@ -14,8 +14,8 @@
 ```mermaid
 flowchart TD
   User([User Browser])
-  User -->|Access| Frontend[GitHub Pages (HTML/CSS/JS)]
-  Frontend -->|Fetch API| Backend[Render.com (Express API)]
+  User -->|Access| Frontend["GitHub Pages (HTML/CSS/JS)"]
+  Frontend -->|Fetch API| Backend["Render.com (Express API)"]
   Backend -->|JSON Response| Frontend
 ```
 
