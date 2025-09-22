@@ -89,6 +89,29 @@ form button:hover {
   transform: translateY(-2px) scale(1.04);
 }
 
+/* Startボタンを大きく・目立たせる */
+#start-btn {
+  width: 80%;
+  max-width: 240px;
+  background: #fc9c26;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 24px auto 0 auto;
+  cursor: pointer;
+  display: block;
+  box-shadow: 0 2px 8px rgba(20, 20, 20, 0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+
+#start-btn:hover {
+  background: #e55d19;
+  transform: translateY(-2px) scale(1.05);
+}
+
 /* 結果表示エリアをGitLab風カードに */
 #recipe-result {
   background: #fff;
