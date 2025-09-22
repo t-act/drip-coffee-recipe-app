@@ -3,19 +3,24 @@ const router = express.Router();
 const recipes = require('../data/recipes.json');
 
 router.post('/', (req, res) => {
-    const { beans, taste, temperature, amount} = req.query;
+    const { roast, taste, temperature, amount} = req.body;
+
+    console.log('reqBody:', req.body);
     
-    if (!beans || !taste || !temperature || !amount || isNaN(Number(amount))) {
+    if (!roast || !taste || !temperature || !amount || isNaN(Number(amount))) {
         return res.status(400).json({ error: 'Missing Parameter' });
     }
 
     const numAmount = Number(amount);
     const recipe = recipes.find(r =>
-        r.beans === beans &&
+        r.roast === roast &&
         r.taste === taste &&
         r.temperature === temperature &&
         Number(r.amount) === numAmount
     );
+
+    console.log('recipes:', recipes);
+    console.log('検索条件:', roast, taste, temperature, numAmount);
 
     if (!recipe) {
         return res.status(404).json({ error: 'No matching recipes found' })

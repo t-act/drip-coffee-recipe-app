@@ -23,17 +23,17 @@ try {
 
 // エンドポイント: POST /get-recipe
 app.post("/get-recipe", (req, res) => {
-  const { beans, taste, temperature, amount } = req.body;
+  const { roast, taste, temperature, amount } = req.body;
 
   // 入力チェック
-  if (!beans || !taste || !temperature || !amount) {
+  if (!roast || !taste || !temperature || !amount) {
     return res.status(400).json({ error: "Invalid input" });
   }
 
   // 条件に一致するレシピを探す
   const filtered = recipes.filter(
     (r) =>
-      r.beans === beans &&
+      r.roast === roast &&
       r.taste === taste &&
       r.temperature.toLowerCase() === temperature.toLowerCase()
   );

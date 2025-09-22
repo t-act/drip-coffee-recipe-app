@@ -3,7 +3,7 @@ document.getElementById("recipe-form").addEventListener("submit", async (e) => {
 
   // フォーム入力を取得
   const userInput = {
-    beans: document.getElementById("beans").value,
+    roast: document.getElementById("roast").value,
     taste: document.getElementById("taste").value,
     temperature: document.getElementById("temperature").value,
     amount: Number(document.getElementById("amount").value),
